@@ -1,0 +1,22 @@
+[@@architexture]
+ 
+## about
+-as: [@@architexture](:opensource-v02.0)
+-using: [@@architexture](:lnseed-v01.0)
+-disc:
+    an open source license, with clear purpose
+   
+## redistribution <source>
+    This is a share-alike license, requiring that all subsequent distributions must also use this license.
+    Distributions must recognize all authors involved in the creation of the source material.
+    One may not distribute this project without express^0 permission from the author(s) of this and if applicable^1, the original source material.
+ 
+[^0]: permission is automatically granted when the source is forked through official channels^2
+[^1]: applicable as the current work is not the original.
+[^2]: official channels include: git, github, and any other author defined channels
+ 
+## redistribution <release>
+    No release build of this software may be distributed without express permission of original authors.
+ 
+## commercial application
+    no projects under this license can be used in a way that monetarily benefits the user or authors.
