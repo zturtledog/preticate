@@ -11,7 +11,8 @@ import com.confusedparrotfish.predicate.Predicate;
 public class ModItems {
     public static final DeferredRegister<Item> items = DeferredRegister.create(ForgeRegistries.ITEMS, Predicate.modid);
 
-    //
+    public static final RegistryObject<Item> ICON_ITEM = items.register("icon_item", 
+    () -> new Item(prop()));
 
     public static void register(IEventBus eventBus) {
         items.register(eventBus);
@@ -20,6 +21,6 @@ public class ModItems {
     //properties
 
     private static Properties prop() {
-        return new Item.Properties();//.group(ModItemGroup.predicatetab);
+        return new Item.Properties().group(ModItemGroup.predicatetab);
     }
 }

@@ -5,7 +5,6 @@ import java.util.function.Supplier;
 import com.confusedparrotfish.predicate.item.ModItems;
 import com.confusedparrotfish.predicate.item.ModItemGroup;
 import com.confusedparrotfish.predicate.Predicate;
-import com.confusedparrotfish.predicate.lib.partikle.*;
 
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -37,7 +36,7 @@ public class ModBlocks {
 
     public static <T extends Block> void registerblockitem(String name, RegistryObject<T> block) {
         ModItems.items.register(name, () -> new BlockItem(block.get(),
-                new Item.Properties()));//.group(ModItemGroup.communetab)));
+                new Item.Properties().group(ModItemGroup.predicatetab)));
     }
 
     public static void register(IEventBus eventBus) {

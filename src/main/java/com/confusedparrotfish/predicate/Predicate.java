@@ -17,6 +17,9 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.confusedparrotfish.predicate.block.ModBlocks;
+import com.confusedparrotfish.predicate.item.ModItems;
+
 import java.util.stream.Collectors;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -28,6 +31,9 @@ public class Predicate {
     private static final Logger LOGGER = LogManager.getLogger();
     public Predicate() {
         IEventBus eventbus= FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModItems.register(eventbus);
+        ModBlocks.register(eventbus);
 
         // Register the setup method for modloading
         eventbus.addListener(this::setup);
