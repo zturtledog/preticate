@@ -14,9 +14,6 @@ import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.server.ServerWorld;
 
-import java.util.Iterator;
-import java.util.Map.Entry;
-
 public class pipeinputile extends TileEntity {
     public blocknetwork networc = new blocknetwork();
 
@@ -33,7 +30,7 @@ public class pipeinputile extends TileEntity {
         networc.rules.put(ModBlocks.PIPE_INPUT.get(), new connectionmanager() {
             @Override
             public connectionrules generateconection(ServerWorld world, BlockPos pos) {
-               connectionrules cnk = new connectionrules();///.fromrot(world.getBlockState(pos).get(FACING));
+               connectionrules cnk = new connectionrules(true, true, true, true, true, true);///.fromrot(world.getBlockState(pos).get(FACING));
                cnk.pass=true;
 
                return cnk;
@@ -56,18 +53,23 @@ public class pipeinputile extends TileEntity {
         //TODO: load
     }
 
+    int counter = 1;
     public void update(ServerWorld world, BlockPos pos) {
         // networc.update(world, pos, new connectionrules(true,true,true,true,true,true));
-        networc.calculate(world, pos, new connectionrules(true,true,true,true,true,true));
+        networc.calculate(world, pos);
 
-        System.out.println(networc.toString());
+        // System.out.println(networc.toString());
 
-        Iterator<Entry<BlockPos, connectionrules>> entries = networc.path.entrySet().iterator();
+        // for (int i = 0; i < networc.visited.size(); i++) {
+        //     networc.visited.get(i);
+        //     world.setBlockState(networc.visited.get(i), Blocks.ANDESITE.getDefaultState(), 3);
+        // }
 
-        while (entries.hasNext()) {
-            Entry<BlockPos, connectionrules> entry = entries.next();
-                
-            world.setBlockState(entry.getKey(), Blocks.ANDESITE.getDefaultState(), 3);
+        if (networc.visited.size() > 0) {
+            if (counter < networc.visited.size()) {
+                world.setBlockState(networc.visited.get(counter), Blocks.ANDESITE.getDefaultState(), 3);
+                counter++;
+            }
         }
     }
 }

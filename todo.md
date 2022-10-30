@@ -7,11 +7,18 @@
     [pump]-
     [output]-
     [input]-
+    [detector]-
 [tank]-
+    [volume-fill]-
+    [capacity]-
+    [divy-resource]-
+    [network-interface]-
+    [drain]-
 [heat-loss]-
 [networks]-
-    [head-parser]-
-    [extesibility]-
+    [flood-fill]- {cm:2022-9-30}
+    [path-finding]-
+    [extesibility]- {cm:2022-7-30}
 
 ## cooking
 
@@ -32,6 +39,10 @@
 [computer]-
 [screen]-
 [disc]-
-[language]-
-[ide]-
+[allium]-
+[gui]-
 [renderer]-
+
+## equipment
+
+[jetpack]-
