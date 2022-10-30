@@ -1,5 +1,8 @@
 {
     "item.predicate.icon_item":"name?",
 
+    "block.predicate.pipe_input":"Port",
+    "block.predicate.pipe":"Pipe",
+
     "itemGroup.Predicate":"predicate"
 }

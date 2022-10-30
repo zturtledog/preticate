@@ -3,8 +3,11 @@ package com.confusedparrotfish.predicate.block;
 import java.util.function.Supplier;
 
 import com.confusedparrotfish.predicate.item.ModItems;
+import com.confusedparrotfish.predicate.lib.partikle.props;
 import com.confusedparrotfish.predicate.item.ModItemGroup;
 import com.confusedparrotfish.predicate.Predicate;
+import com.confusedparrotfish.predicate.block.custom.pipes.pipe;
+import com.confusedparrotfish.predicate.block.custom.pipes.pipeinput;
 
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -20,9 +23,16 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public class ModBlocks {
-    public static final DeferredRegister<Block> blocks = DeferredRegister.create(ForgeRegistries.BLOCKS, Predicate.modid);
+    public static final DeferredRegister<Block> blocks = DeferredRegister.create(ForgeRegistries.BLOCKS,
+            Predicate.modid);
 
     // blocks
+
+    public static final RegistryObject<Block> PIPE = registerblock("pipe",
+            () -> new pipe(props.metal_prop(1)));
+
+    public static final RegistryObject<Block> PIPE_INPUT = registerblock("pipe_input",
+            () -> new pipeinput(props.metal_prop(1)));
 
     // end of blocks
 

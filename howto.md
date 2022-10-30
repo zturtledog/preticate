@@ -3,7 +3,7 @@
 @commune:ModBLocks 
 ```java
 public static final RegistryObject<Block> <name> = registerblock("<uuid>", 
-        ()-> new Block(props.stone_prop(1));
+        ()-> new Block(props.stone_prop(1)));
 ```
 
 @resource:models/block/<uuid>.json

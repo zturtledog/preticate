@@ -19,6 +19,7 @@ import org.apache.logging.log4j.Logger;
 
 import com.confusedparrotfish.predicate.block.ModBlocks;
 import com.confusedparrotfish.predicate.item.ModItems;
+import com.confusedparrotfish.predicate.tileentity.ModTileEntities;
 
 import java.util.stream.Collectors;
 
@@ -28,12 +29,13 @@ public class Predicate {
     public static final String modid = "predicate";
 
     // Directly reference a log4j logger.
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
     public Predicate() {
         IEventBus eventbus= FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(eventbus);
         ModBlocks.register(eventbus);
+        ModTileEntities.register(eventbus);
 
         // Register the setup method for modloading
         eventbus.addListener(this::setup);
@@ -95,3 +97,11 @@ public class Predicate {
         }
     }
 }
+
+
+//bfgtyc ctydfmrsuz6CEJTX/*  */
+//bghndefjmrtyck ,jl.x;78
+//klm,.; p
+//_}+"
+//p40z\]bcfvdgrtcesxy347 0=]\OP_{"L:{?."} -=bgvh fdsxebdefghryt
+// lm;jhkkli9;p40\n mn ,adeszgyuv bn
